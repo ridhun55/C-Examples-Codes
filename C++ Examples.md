@@ -310,3 +310,63 @@ C++ Examples Codes Run In Dav C++ IDE
    }<span class="hljs-keyword" style="color: rgb(170, 13, 145);">while</span> ( i &lt;= <span class="hljs-number" style="color: rgb(28, 0, 207);">0</span> );
 
 }</pre>
+
+# Controll Satements ( Jump Statements )
+
+# Example 16 : goto
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-meta" style="color: rgb(28, 0, 207);">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword" style="color: rgb(170, 13, 145);">using</span> <span class="hljs-keyword" style="color: rgb(170, 13, 145);">namespace</span> <span class="hljs-built_in" style="color: rgb(92, 38, 153);">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword" style="color: rgb(170, 13, 145);">int</span> <span class="hljs-title" style="color: rgb(28, 0, 207);">main</span><span class="hljs-params" style="color: rgb(92, 38, 153);">()</span>
+</span>{
+   <span class="hljs-keyword" style="color: rgb(170, 13, 145);">int</span> i = <span class="hljs-number" style="color: rgb(28, 0, 207);">0</span>;
+   
+   lable : <span class="hljs-keyword" style="color: rgb(170, 13, 145);">if</span>( i &lt; <span class="hljs-number" style="color: rgb(28, 0, 207);">10</span> )
+   			{
+				<span class="hljs-built_in" style="color: rgb(92, 38, 153);">cout</span>&lt;&lt; i ;	<span class="hljs-built_in" style="color: rgb(92, 38, 153);">cout</span>&lt;&lt;<span class="hljs-string" style="color: rgb(196, 26, 22);">"\n"</span>;
+				i++ ;  	
+   			}
+   			<span class="hljs-keyword" style="color: rgb(170, 13, 145);">goto</span> lable;
+
+}</pre>
+
+# Example 17 : break
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-meta" style="color: rgb(28, 0, 207);">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword" style="color: rgb(170, 13, 145);">using</span> <span class="hljs-keyword" style="color: rgb(170, 13, 145);">namespace</span> <span class="hljs-built_in" style="color: rgb(92, 38, 153);">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword" style="color: rgb(170, 13, 145);">int</span> <span class="hljs-title" style="color: rgb(28, 0, 207);">main</span><span class="hljs-params" style="color: rgb(92, 38, 153);">()</span>
+</span>{
+   
+   <span class="hljs-keyword" style="color: rgb(170, 13, 145);">for</span> (<span class="hljs-keyword" style="color: rgb(170, 13, 145);">int</span> i = <span class="hljs-number" style="color: rgb(28, 0, 207);">0</span>; i &lt; <span class="hljs-number" style="color: rgb(28, 0, 207);">10</span>; i++ )
+   {
+   	<span class="hljs-built_in" style="color: rgb(92, 38, 153);">cout</span>&lt;&lt; i;	<span class="hljs-built_in" style="color: rgb(92, 38, 153);">cout</span>&lt;&lt;<span class="hljs-string" style="color: rgb(196, 26, 22);">"\n"</span>;
+   	
+   		<span class="hljs-keyword" style="color: rgb(170, 13, 145);">if</span>( i == <span class="hljs-number" style="color: rgb(28, 0, 207);">3</span> )
+   		{
+   			<span class="hljs-keyword" style="color: rgb(170, 13, 145);">break</span>;
+	   	}
+   }
+
+}</pre>
+
+# Example 18 : continue
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-meta" style="color: rgb(28, 0, 207);">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword" style="color: rgb(170, 13, 145);">using</span> <span class="hljs-keyword" style="color: rgb(170, 13, 145);">namespace</span> <span class="hljs-built_in" style="color: rgb(92, 38, 153);">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword" style="color: rgb(170, 13, 145);">int</span> <span class="hljs-title" style="color: rgb(28, 0, 207);">main</span><span class="hljs-params" style="color: rgb(92, 38, 153);">()</span>
+</span>{
+   
+   <span class="hljs-keyword" style="color: rgb(170, 13, 145);">for</span> (<span class="hljs-keyword" style="color: rgb(170, 13, 145);">int</span> i = <span class="hljs-number" style="color: rgb(28, 0, 207);">0</span>; i &lt; <span class="hljs-number" style="color: rgb(28, 0, 207);">10</span>; i++ )
+   {
+   		<span class="hljs-keyword" style="color: rgb(170, 13, 145);">if</span>( i == <span class="hljs-number" style="color: rgb(28, 0, 207);">3</span> )
+   		{
+   			<span class="hljs-keyword" style="color: rgb(170, 13, 145);">continue</span>;
+	   	}
+	
+	<span class="hljs-built_in" style="color: rgb(92, 38, 153);">cout</span>&lt;&lt; i;	<span class="hljs-built_in" style="color: rgb(92, 38, 153);">cout</span>&lt;&lt;<span class="hljs-string" style="color: rgb(196, 26, 22);">"\n"</span>;
+   }
+
+}</pre>
