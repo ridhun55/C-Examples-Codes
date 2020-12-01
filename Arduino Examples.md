@@ -45,3 +45,17 @@ Print "Hello World" on Serial monitor
     <span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">println</span>(data);
   }
 }</pre>
+
+Example 4 : Blink LED
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">setup</span>()
+{
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">13</span>,<span class="hljs-literal" style="color: rgb(120, 169, 96);">OUTPUT</span>);
+}
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">loop</span>()
+{
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">13</span>,<span class="hljs-literal" style="color: rgb(120, 169, 96);">HIGH</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">delay</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">1000</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">13</span>,<span class="hljs-literal" style="color: rgb(120, 169, 96);">LOW</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">delay</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">1000</span>);
+}</pre>
