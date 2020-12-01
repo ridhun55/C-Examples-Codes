@@ -16,6 +16,21 @@ Print "Hello World" on Serial monitor
   <span class="hljs-built_in" style="color: rgb(211, 84, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(211, 84, 0);">println</span>(<span class="hljs-string" style="color: rgb(0, 92, 95);">"hello world"</span>);
 }</pre>
 
+# Example 2 : Read data from Serial monitor & Print on Serial monitor (char)
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">setup</span>()
+{
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">begin</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">9600</span>);
+}
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">loop</span>()
+{
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">if</span>(<span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">available</span>()&gt;<span class="hljs-number" style="color: rgb(136, 0, 0);">0</span>)
+  {
+    <span class="hljs-keyword" style="font-weight: 700;">char</span> data = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">read</span>();
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">println</span>(data);
+  }
+}</pre>
+
 # Example 3 : Read data from Serial monitor & Print on Serial monitor (string)
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">setup</span>()
