@@ -75,3 +75,52 @@ Print "Hello World" on Serial monitor
   <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(LED,<span class="hljs-literal" style="color: rgb(120, 169, 96);">LOW</span>);
   <span class="hljs-built_in" style="color: rgb(57, 115, 0);">delay</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">1000</span>);
 }</pre>
+
+# Example 6 : Switch interfaceing
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">int</span> s1 = <span class="hljs-number" style="color: rgb(136, 0, 0);">0</span>;
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">setup</span>()
+{
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">8</span>, <span class="hljs-literal" style="color: rgb(120, 169, 96);">INPUT</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">13</span>, <span class="hljs-literal" style="color: rgb(120, 169, 96);">OUTPUT</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">begin</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">9600</span>);
+}
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">loop</span>()
+{
+  s1 = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalRead</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">8</span>);
+
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">if</span> (s1 == <span class="hljs-literal" style="color: rgb(120, 169, 96);">LOW</span>)
+  {
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">13</span>, <span class="hljs-literal" style="color: rgb(120, 169, 96);">LOW</span>);
+  }
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">else</span>
+  {
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">13</span>, <span class="hljs-literal" style="color: rgb(120, 169, 96);">HIGH</span>);
+  }
+}</pre>
+
+# Example 7 : IR Sensor Interfaceing
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">int</span> IR = <span class="hljs-number" style="color: rgb(136, 0, 0);">2</span>;
+<span class="hljs-keyword" style="font-weight: 700;">int</span> LED = <span class="hljs-number" style="color: rgb(136, 0, 0);">13</span>;
+
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">setup</span>()
+{
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span> (IR, <span class="hljs-literal" style="color: rgb(120, 169, 96);">INPUT</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span> (LED, <span class="hljs-literal" style="color: rgb(120, 169, 96);">OUTPUT</span>);
+}
+
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">loop</span>()
+{
+  <span class="hljs-keyword" style="font-weight: 700;">int</span> data = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalRead</span> (IR);
+
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">if</span> (data == <span class="hljs-number" style="color: rgb(136, 0, 0);">1</span>)
+  {
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(LED, <span class="hljs-literal" style="color: rgb(120, 169, 96);">LOW</span>);
+  }
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">else</span>
+  {
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(LED, <span class="hljs-literal" style="color: rgb(120, 169, 96);">HIGH</span>);
+  }
+}
+</pre>
