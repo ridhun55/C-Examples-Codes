@@ -31,7 +31,9 @@ Print "Hello World" on Serial monitor
   }
 }</pre
 
-<h3> Methord 2 : Read data from Serial monitor & Print on Serial monitor (string)</h3>
+
+<h3> Methord 2 : Read data from Serial monitor & Print on Serial monitor (string) </h3>
+
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(67, 79, 84);"><span class="hljs-keyword" style="color: rgb(0, 151, 157);">void</span> <span class="hljs-built_in" style="color: rgb(211, 84, 0);">setup</span>()
 {
