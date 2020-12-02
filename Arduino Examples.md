@@ -154,7 +154,7 @@ Print "Hello World" on Serial monitor
 
 # Example 9 : Bluetooth Module Interfaceing
 
-Download and install a Bluetooth terminal application on your phone 
+Download and install a Bluetooth terminal application on your phone </br>
 Android App : https://play.google.com/store/apps/details?id=project.bluetoothterminal
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-meta" style="color: rgb(31, 113, 153);">#<span class="hljs-meta-keyword" style="font-weight: 700;">include</span><span class="hljs-meta-string" style="color: rgb(77, 153, 191);">&lt;SoftwareSerial.h&gt;</span></span>
