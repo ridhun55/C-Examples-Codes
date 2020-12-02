@@ -124,3 +124,51 @@ Print "Hello World" on Serial monitor
   }
 }
 </pre>
+
+# Example 8 : Ultrasonic Sensor Interfaceing
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">int</span> trigPin = <span class="hljs-number" style="color: rgb(136, 0, 0);">9</span>;
+<span class="hljs-keyword" style="font-weight: 700;">int</span> echoPin = <span class="hljs-number" style="color: rgb(136, 0, 0);">10</span>;
+<span class="hljs-keyword" style="font-weight: 700;">long</span> duration, distance;
+
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">setup</span>()
+{
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">begin</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">9600</span>);
+
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(trigPin, <span class="hljs-literal" style="color: rgb(120, 169, 96);">OUTPUT</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(echoPin, <span class="hljs-literal" style="color: rgb(120, 169, 96);">INPUT</span>);
+}
+
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">loop</span>()
+{
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(trigPin, <span class="hljs-literal" style="color: rgb(120, 169, 96);">LOW</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">delayMicroseconds</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">2</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalWrite</span>(trigPin, <span class="hljs-literal" style="color: rgb(120, 169, 96);">HIGH</span>);        
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">delayMicroseconds</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">10</span>);
+  duration = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">pulseIn</span>(echoPin, <span class="hljs-literal" style="color: rgb(120, 169, 96);">HIGH</span>);  
+  distance = duration / <span class="hljs-number" style="color: rgb(136, 0, 0);">58.2</span>;         
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">delay</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">10</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">println</span>(distance);
+
+}</pre>
+
+# Example 9 : Bluetooth Module Interfaceing
+
+download any moble terminal for bluetooth communication
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-meta" style="color: rgb(31, 113, 153);">#<span class="hljs-meta-keyword" style="font-weight: 700;">include</span><span class="hljs-meta-string" style="color: rgb(77, 153, 191);">&lt;SoftwareSerial.h&gt;</span></span>
+<span class="hljs-built_in" style="color: rgb(57, 115, 0);">SoftwareSerial</span> bt(<span class="hljs-number" style="color: rgb(136, 0, 0);">2</span>, <span class="hljs-number" style="color: rgb(136, 0, 0);">3</span>); <span class="hljs-comment" style="color: rgb(136, 136, 136);">/* (Rx,Tx) */</span>
+
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">setup</span>()
+{
+  bt.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">begin</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">9600</span>);
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">begin</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">9600</span>);
+}
+
+<span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">loop</span>()
+{
+  <span class="hljs-built_in" style="color: rgb(57, 115, 0);">if</span> (bt.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">available</span>())
+  {
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">Serial</span>.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">write</span>(bt.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">read</span>());
+  }
+}</pre>
