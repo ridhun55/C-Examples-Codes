@@ -101,7 +101,7 @@ Print "Hello World" on Serial monitor
 
 # Example 7 : IR Sensor Interfaceing
 
-<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">int</span> IR = <span class="hljs-number" style="color: rgb(136, 0, 0);">2</span>;
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240) none repeat scroll 0% 0%; color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">int</span> IR = <span class="hljs-number" style="color: rgb(136, 0, 0);">12</span>;
 <span class="hljs-keyword" style="font-weight: 700;">int</span> LED = <span class="hljs-number" style="color: rgb(136, 0, 0);">13</span>;
 
 <span class="hljs-keyword" style="font-weight: 700;">void</span> <span class="hljs-built_in" style="color: rgb(57, 115, 0);">setup</span>()
